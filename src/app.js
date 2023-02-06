@@ -1,6 +1,12 @@
 import React from 'react';
+import Header from './header.js';
+import Meme from './meme.js'
+
 export default function App(){
   return (
-    <h1>Meme</h1>
+    <div>
+      <Header />
+      <Meme />
+    </div>
   )
-}
+};
