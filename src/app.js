@@ -1,22 +1,10 @@
 import React from 'react';
 import './index.css';
 import data from './list.js';
+import Card from './card.js';
+import Form from './form.js';
 
 
-function Card(props){
-  const bgColor = {
-    backgroundColor: props.itemColor ? 'green' : 'red'
-  };
-
-  return (
-    <div className='card'>
-      <h3>{props.name}</h3>
-      <p>{props.desc}</p>
-      <h4>{props.age}</h4>
-      <button onClick={() => props.function(props.id)}  style={bgColor}>Flip Color</button>
-    </div>
-  )
-}
 
 export default function App(){
   const [color, setColor] = React.useState(data.map(item => item.color));
@@ -30,8 +18,11 @@ export default function App(){
   })
   
   return (
-    <div className='container'>
-      {cards}
-    </div>
+    <>
+      <div className='container'>
+        {/* {cards} */}
+        <Form />
+      </div>
+    </>
   )
 }

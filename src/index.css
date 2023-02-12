@@ -10,12 +10,12 @@ h3, h4, p{
   margin-bottom: 5px;
 }
 
-button{
+/* button{
   border: none;
   padding: 5px;
   color: white;
   border-radius: 5px;
-}
+} */
 
 
 .card{
@@ -26,4 +26,15 @@ button{
   height: 100px;
   width: 100px;
   border: 1px solid black;
+}
+
+.form{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+input, textarea{
+  padding : 5px;
+  margin: 5px;
 }
