@@ -1,5 +1,4 @@
-## airbnb Clone  
-### Data Driven React  
+## airbnb Clone  |  Data Driven React  
 
 #### Concepts Learned  
 
