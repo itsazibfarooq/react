@@ -1,7 +1,7 @@
 ### Basic webpage application in react  
 #### Concepts Learned  
 
-- Basic Folder Handling  
+- Basic Files Handling  
 - React Components  
 - Importing Files  
 - Rendering React Components  
