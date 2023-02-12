@@ -7,7 +7,7 @@
 - Rendering React Components  
 - Styling  
   
-### How to RUN the project  
+#### How to RUN the project  
 1. Install React  
 2. clone the branch  
 3. Open terminal 
