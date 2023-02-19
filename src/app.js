@@ -1,10 +1,11 @@
 import React from 'react'
+import Register from './pages/Register'
+import Login from './pages/Login.js';
+
 
 function App() {
   return (
-    <div>
-
-    </div>
+    <Register />
   )
 }
 
