@@ -1,4 +1,3 @@
-### Whatsapp Clone  
-
-#### FrontEnd Deployment -> `firebase`
-#### BackEnd Deployment -> `Heroku`
+### FrontEnd
+-- FrameWork -> `React`
+-- Deployment -> 'Firebase`
