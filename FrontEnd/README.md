@@ -1,3 +1,3 @@
 ### FrontEnd  
--- FrameWork -> `React`  
--- Deployment -> 'Firebase`  
+* FrameWork -> `React`  
+* Deployment -> 'Firebase`  

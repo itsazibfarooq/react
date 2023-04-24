@@ -1,5 +1,5 @@
 ### Backend  
--- Server -> `Express`  
--- RunTime Environment -> `Node`  
--- Database -> `MongoDb`  
--- Deployment -> `Heroku`  
+* Server -> `Express`  
+* RunTime Environment -> `Node`  
+* Database -> `MongoDb`  
+* Deployment -> `Heroku`  
