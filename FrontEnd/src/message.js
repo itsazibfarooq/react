@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Message(props) {
+function Message({ message }) {
   return (
-    <p className={`chat__message ${props?.reciever}`}>
-      <span className='chat__name'>Azib</span>
-      This is the message
+    <p className={`chat__message ${!message.recieved && 'chat_message_reciever'}`}>
+      <span className='chat__name'>{message.name}</span>
+      {message.message}
       <span className='chat__timestamp'>
-        {new Date().toString()}
+        {message.timestamp}
       </span>
     </p>
   )

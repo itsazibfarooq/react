@@ -1,19 +1,36 @@
-
-
-
-
-
 import { Avatar, IconButton } from '@material-ui/core';
 import { AttachFile, InsertEmoticon, MicOutlined, MoreVert, SearchOutlined } from '@material-ui/icons';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Message from './message';
+import backend from './axios';
 
-function Chat() {
+function Chat({ messages }) {
   const [input, setInput] = useState('');
 
-  const sendMessage = () => {
-    console.log('Message sent');
+  const sendMessage = async (e) => {
+    e.preventDefault();
+    const time = `${new Date().getHours()}:${new Date().getMinutes()}`
+    await backend.post('/new', {
+      message: input,
+      name: "Azib",
+      timestamp: time,
+      recieved: false
+    });
+    setInput('');
   }
+
+  const chatBodyRef = useRef(null);
+
+  useEffect(() => {
+    const chatBody = chatBodyRef.current;
+    const observer = new MutationObserver(() => {
+      chatBody.scrollTop = chatBody.scrollHeight;
+    });
+
+    observer.observe(chatBody, { childList: true });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className='chat'>
@@ -36,10 +53,10 @@ function Chat() {
         </div>
       </div>
 
-      <div className='chat__body'>
-        <Message />
-        <Message reciever='chat_message_reciever' />
-        <Message />
+      <div className='chat__body' ref={chatBodyRef}>
+        {messages.map((msg, index) => {
+          return (<Message key={index} message={msg} />);
+        })}
       </div>
 
       <div className='chat__footer'>
@@ -65,3 +82,12 @@ function Chat() {
 }
 
 export default Chat
+
+const chatBody = document.querySelector('.chat__body');
+
+if (chatBody) {
+  const observer = new MutationObserver(() => {
+    chatBody.scrollTop = chatBody.scrollHeight;
+  });
+  observer.observe(chatBody, { childList: true, subtree: true });
+}
